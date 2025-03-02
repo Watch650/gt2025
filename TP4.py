@@ -3,6 +3,8 @@
 #   - Input: Ask user Root node
 #   - Output: List of edges of Minimal Spanning Tree from 2 above algo as well as weighted sum of those tree
 
+import heapq
+
 class Graph:
     def __init__(self, matrix):
         self.matrix = matrix
@@ -10,7 +12,6 @@ class Graph:
 
     # Implements Prim's Algorithm for MST
     def prim(self, start):
-        import heapq
 
         visited = set()
         mst_edges = []
